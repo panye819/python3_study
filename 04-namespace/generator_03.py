@@ -15,7 +15,7 @@ def createNum():
 
 a=createNum()
 
-for num in a:
-	print(num)
+ret=a.__next__()
+print(ret)
 
 
