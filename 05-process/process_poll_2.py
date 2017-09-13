@@ -14,7 +14,7 @@ po=Pool(3)
 
 for i in range(5):
     print("---%d---"%i)
-    po.apply_async(worker(i,))
+    po.apply_async(worker,(i,))
 
 
 #关闭进程池，关闭后po不再接受新的请求
