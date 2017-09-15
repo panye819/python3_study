@@ -1,8 +1,12 @@
 from django.contrib import admin
 
 # Register your models here.
-from models import BookInfo
-from models import HeroInfo
+from models import *
+
+
+class HeroInfoInline(admin.StackedInline):
+    model = HeroInfo
+    extra = 3
 
 
 class BookInfoAdmin(admin.ModelAdmin):
@@ -14,6 +18,8 @@ class BookInfoAdmin(admin.ModelAdmin):
         ('base', {'fields': ['btitle']}),
         ('super', {'fields': ['bpub_date']}),
     ]
+    inlines = [HeroInfoInline]
+
 
 admin.site.register(BookInfo, BookInfoAdmin)
 admin.site.register(HeroInfo)
