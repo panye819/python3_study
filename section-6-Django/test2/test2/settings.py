@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'booktest'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,7 +81,7 @@ DATABASES = {
         'NAME': 'test2',
         'USER': 'root',
         'PASSWORD': '123456',
-        'HOST': 'locahost',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }

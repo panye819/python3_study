@@ -37,5 +37,29 @@ ORM(Object,relation,mapping),它实现了数据模型与数据库的解耦，及
         极大的减轻了开发人员的工作量，不需要面对因数据库变更而导致的无效劳动
         Django中的模型包含存储数据的字段和约束，对应着数据库中唯一的表
 
+    字段类型：
+        AutoField：一个根据实际ID自动增长的IntegerField，通常不指定
+        BooleanField：true/false字段
+        CharField：字符串，默认表单样式是TextInput
+        TextField：大文本字段，一般超过4000使用，默认的表单空间是TextArea
+        IntegerField：整数
+        DecimalField：使用Python的decimal实例表示的十进制浮点数
+            DecimalField.max_digits：位数总数
+            DecimalField.decimal_places：小数点后的数字位数
+        FloatField：用Python的float实例来表示的浮点数
+        DateField：使用Python的datetime.date实例表示的日期
+            参数DateFiled.auto_now：每次保存对象时，自动设置该字段为当前时间，用于"最后一次修改"的时间戳
+        FileField：一个上传文件的字段
+        ImageField：继承了FileField的所有属性和方法，但对上传的对象进行校验，确保它是个有效的image
 
-
+    关系：
+        关系的类型包括：
+            ForeignKey：一对多，将字段定义在多的端中
+            ManyToManyField：多对多，将字段定在两端中
+            OneToOneField：一对一，将字段定义在任意一端中
+        可以维护递归的关联关系，使用self制度
+        用一访问多：对象.模型类(小写)_set
+    管理器是Django的模型进行数据库的查询操作的接口，Django应用的每个模型都拥有至少一个管理器
+        自定义管理器类主要用于两种情况
+            情况一：向管理器类中添加额外的方法：见下面“创建对象”中的方式二
+            情况二：修改管理器返回的原始查询集：重写get_queryset()方法
