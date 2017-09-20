@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../section-5-frontend/01-html/.idea/01-html.iml" filepath="$PROJECT_DIR$/../../section-5-frontend/01-html/.idea/01-html.iml" />
       <module fileurl="file://$PROJECT_DIR$/../mysite/.idea/mysite.iml" filepath="$PROJECT_DIR$/../mysite/.idea/mysite.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/test1.iml" filepath="$PROJECT_DIR$/.idea/test1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../test2/.idea/test2.iml" filepath="$PROJECT_DIR$/../test2/.idea/test2.iml" />
