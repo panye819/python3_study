@@ -27,3 +27,8 @@ print('*'*50)
 name = 'Guido'
 n = 37
 print(str2.format_map(vars()))
+
+#format和format_map()的一个缺陷就是它们并不能很好的处理变量缺失的情况
+#下面的命令就会报错 KeyError: 'n'
+
+#s.format(name='Guido')
