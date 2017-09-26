@@ -19,7 +19,9 @@ del shoplist
 f = open(shoplistfile,'rb')
 storedlist = pickle.load(f)
 print(storedlist)
-
+# 千万不要对不信任的数据使用pickle.load，因为pickle在加载时有一个副作用就是它会自动加载相应模块并构造实例对象
+# 如果关键字知道pickle的工作原理，就可以构造出一个恶意的数据导致Python执行随意指定的系统目录
+# 因此，一定要保证pickle只在相互之间可以认证对方的解析器的内部使用
 print("------------------我是分割线------------------")
 
 """
