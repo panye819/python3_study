@@ -1,0 +1,5 @@
+1、mkvirtualenv webScrap --python=python3
+2、pip3 install requests selenium chromedriver phantomjs lxml \
+    beautifulsoup4  pyquery pymysql pymongo redis flask django==1.10.6 \
+    jupyter
+3|
