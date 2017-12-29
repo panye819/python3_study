@@ -8,7 +8,7 @@ content = requests.get('http://book.douban.com/').text
 with open('book.txt', 'w+') as f:
     f.write(content)
     f.close()
-
+    
 # print(content)
 # pattern = re.compile(
 #     '<li.*?cover.*?href="(.*?)".*?title="(.*?)".*?more-meta.*?author">\
@@ -21,4 +21,3 @@ with open('book.txt', 'w+') as f:
 #     author = re.sub('\s', '', author)
 #     date = re.sub('\s', '', date)
 #     print(url, name, author, date)
-#
