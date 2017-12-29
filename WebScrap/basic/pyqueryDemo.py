@@ -18,9 +18,9 @@ html2 = """
     <ul class="list">
      <li class="item-0">first item</li>
      <li class="item-1"><a href="link2.html"></a>second item</li>
-     <li class="item-0 active"><a>href="link3.html"</a><span class="bold"></span>third item</li>
-     <li class="item-1 active"><a>href="link4.html"fourth item</a></li>
-     <li class="item-0"><a>href="link5.html"fifth item</a></li>
+     <li class="item-0 active"><a href="link3.html"><span class="bold">third item</span></a></li>
+     <li class="item-1 active"><a href="link4.html">fourth item</a></li>
+     <li class="item-0"><a href="link5.html">fifth item</a></li>
     </ul>
   </div>
 </div>
@@ -77,4 +77,29 @@ con7 = items7.parents()
 print(type(con7))
 print(con7)
 print("--"*50)
+con8 = items7.parents('.wrap')
+print(con8)
+print("--"*50)
 
+print("查找兄弟元素。。。")
+lis3 = doc7('.list .item-0.active')
+print(lis3)
+print(lis3.siblings())
+print(lis3.siblings('.active'))
+print("--"*50)
+
+print("获取属性。。。")
+a = doc7('.item-0.active a')
+print(a)
+print(a.attr('href'))
+print(a.attr.href)
+print("--"*50)
+
+print("获取文本。。。")
+print(a.text())
+print("--"*50)
+
+print("获取HTML。。。")
+a2 = doc7('.item-0.active')
+print(a2)
+print(a2.html())
