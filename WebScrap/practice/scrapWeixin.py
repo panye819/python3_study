@@ -1,6 +1,5 @@
 import requests
 import time
-import os
 import pymongo
 from pyquery import PyQuery as pq
 from urllib.parse import urlencode
