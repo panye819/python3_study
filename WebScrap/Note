@@ -1,8 +1,9 @@
 1、mkvirtualenv webScrap --python=python3
-2、pip3 install requests selenium chromedriver phantomjs lxml \
+2、install phantomjs
+3、pip3 install requests selenium chromedriver  lxml \
     beautifulsoup4  pyquery pymysql pymongo redis flask django==1.10.6 \
     jupyter
-3、正则表达式
+4、正则表达式
     \w 匹配字母数字及下划线
     \W 匹配非字母数字及下划线
     \s 匹配任意空白字符
@@ -29,7 +30,7 @@
    ()  匹配括号内的表达式，也表示一个组
    总结：
         尽量使用泛匹配，使用括号得到匹配目标，尽量使用非贪婪模式，有换行符就用re.S
-4、等待：
+5、等待：
     1）隐式等待
         当使用了隐式等待执行测试的时候，如果webdriver没有在DOM中招待元素，将继续等待，超出设定时间后
         则抛出找不到元素的异常。
